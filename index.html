@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    Hello
+    <h1>我不知道</h1>
+    <div id="time"></div>
 </body>
+
+<script>
+    function init(){
+        var times = new Date().toLocaleTimeString();
+        document.getElementById("time").innerHTML = times;
+
+        setTimeout(init,1000);
+    }
+
+    window.onload(init);
+</script>
 </html>
